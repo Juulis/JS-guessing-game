@@ -8,12 +8,13 @@ var ngb = document.getElementById('replayBtn');
 ngb.addEventListener("click", resetGame)
 var guessBtn = document.getElementById("guessBtn");
 guessBtn.addEventListener("click", enterGuess);
-var cheat = document.getElementById("cheat");
-cheat.innerHTML = n;
+
 
 
 function enterGuess() {
     rangeOutput.innerHTML = "Det är ett tal mellan 1-" + incr;
+    var cheat = document.getElementById("cheat");    
+    cheat.innerHTML = n;
 
     if (textInput.value < n) {
         answer.innerHTML = "För litet!";
