@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>övning 1</title>
-    <script type="text/javascript" src="js.js"></script>
-  </head>
-  <body
-  <p>Gissa mitt nummer!</p>
-  <form>
-    <input id="textInput" type="text" name="textInput" placeholder="Skriv talet jag tänker på!">
-    <div id="button1" style="display:inline">
-    <button type="button" onclick="doThings()">Pröva Lyckan!</button>
-  </div>
-  </form>
-
-    <p id="answer">Mhm!</p>
-    <p id="number" style="color:white"></p>
-    <div id="button2">
-      <button id="newGameButton" type="button" name="newGameButtton" style="display:none">Vill du spela igen?</button>
-    </div>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess again! :D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="mainContainer">
+    <section id="feedback"></section>
+    <section id="welcome">
+        <h1>Välkommen!</h1>
+        <p>Gissa mitt nummer!</p>
+        <p id="rangeOutput"></p>
+    </section>
+    <section id="guess">
+        <input type="text" id="guessInput" placeholder="Skriv in din gissning"/>
+        <button class="button" id="guessBtn">Submit guess</button>
+        <p id="answer"></p>
+    </section>
+    <section id="replay">
+        <button class="button" id="replayBtn">Play again</button>
+    </section>
+    <p id="cheat"></p>
+</div>
+<script src="js.js"></script>
+</body>
 </html>

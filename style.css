@@ -1,0 +1,63 @@
+body {
+    background-color: pink;
+    color:pink;
+}
+
+.button {
+    padding: 5px;
+    border-radius: 6px;
+    background-color: pink;
+    color: red;
+    margin: 10px;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.button:enabled {
+    outline: none;
+}
+
+.button a {
+    line-height: 40px;
+    color: white;
+}
+
+
+input[type=text] {
+    border: solid 2px pink;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px 0 0 10px;
+    background-color: pink;
+}
+
+input[type=text]:focus {
+    outline: none;
+    background-color: white;
+}
+
+#mainContainer {
+    background-color: red;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    padding-top:20px;
+    border-radius: 30px;
+}
+#welcome{
+}
+#replayBtn{
+    display: none;
+}
+
+#cheat{  /* FUSKA INTE FFS!! ;) CHEATER CHEATER!! */
+color:red;
+}

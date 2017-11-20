@@ -1,38 +1,43 @@
-
-var n =  Math.floor(Math.random()*10)+1;
+var n = Math.floor(Math.random() * 10) + 1;
 var incr = 10;
 
-function doThings(){
-var p = document.getElementById('answer');
-var textInput = document.getElementById('textInput');
-var number=document.getElementById('number');
-var newGame = document.getElementById('newGame');
-var ngb = document.getElementById('newGameButton');
-number.innerHTML=n;
+var textInput = document.getElementById('guessInput');
+var answer = document.getElementById('answer');
+var rangeOutput = document.getElementById('rangeOutput');
+var ngb = document.getElementById('replayBtn');
+ngb.addEventListener("click", resetGame)
+var guessBtn = document.getElementById("guessBtn");
+guessBtn.addEventListener("click", enterGuess);
+var cheat = document.getElementById("cheat");
+cheat.innerHTML = n;
 
-var run = true;
 
-do {
+function enterGuess() {
+    rangeOutput.innerHTML = "Det är ett tal mellan 1-" + incr;
 
-if (textInput.value==n){
-    incr=incr+10;
-    answer.innerHTML="RÄTT!! Du är ju fan grym!?\nVill du spela igen med tal 1-"+%incr;
-    textInput.value=null;
-    ngb.style.display="inline";
-  n =  Math.floor(Math.random()*incr)+1;
-
-  break;
+    if (textInput.value < n) {
+        answer.innerHTML = "För litet!";
+        textInput.value = null;
+    }
+    else if (textInput.value > n) {
+        answer.innerHTML = "För stort!";
+        textInput.value = null;
+    }
+else if (textInput.value == n) {
+        answer.innerHTML = "RÄTT!! Du är ju fan grym!?\nVill du spela igen med tal 1-" + (incr + 10);
+        textInput.value = null;
+        ngb.style.display = "inline";
+        guessBtn.disabled = true;
+        textInput.disabled = true;
+    }
 }
-if(textInput.value<n){
-  answer.innerHTML="För litet!";
-  textInput.value=null;
-  break;
-}
-if(textInput.value>n){
-  answer.innerHTML="För stort!";
-  textInput.value=null;
-  break;
-}
-}while(run)
 
+function resetGame() {
+    ngb.style.display = "none";
+    answer.innerHTML = "";
+    incr += 10;
+    n = Math.floor(Math.random() * incr) + 1;
+    rangeOutput.innerHTML = "Det är ett tal mellan 1-" + incr + " " + n;
+    guessBtn.disabled = false;
+    textInput.disabled = false;
 }
