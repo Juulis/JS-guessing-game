@@ -1,6 +1,6 @@
 body {
     background-color: pink;
-    color:pink;
+    color: pink;
 }
 
 .button {
@@ -28,7 +28,6 @@ body {
     color: white;
 }
 
-
 input[type=text] {
     border: solid 2px pink;
     border-radius: 10px;
@@ -49,15 +48,24 @@ input[type=text]:focus {
     margin: auto;
     margin-top: 200px;
     text-align: center;
-    padding-top:20px;
+    padding-top: 20px;
     border-radius: 30px;
 }
-#welcome{
-}
-#replayBtn{
+
+#replayBtn {
     display: none;
 }
 
-#cheat{  /* FUSKA INTE FFS!! ;) CHEATER CHEATER!! */
-color:red;
+#cheat { /* FUSKA INTE FFS!! ;) CHEATER CHEATER!! */
+    color: red;
+}
+
+@media (max-width: 450px) {
+    #mainContainer {
+        width:100%;
+        height:100%;
+    }
+    body{
+        background-color: red;
+    }
 }
