@@ -1,4 +1,4 @@
-var n = Math.floor(Math.random() * 10) + 1;
+﻿var n = Math.floor(Math.random() * 10) + 1;
 var incr = 10;
 
 var textInput = document.getElementById('guessInput');
@@ -37,7 +37,7 @@ function resetGame() {
     answer.innerHTML = "";
     incr += 10;
     n = Math.floor(Math.random() * incr) + 1;
-    rangeOutput.innerHTML = "Det är ett tal mellan 1-" + incr + " " + n;
+    rangeOutput.innerHTML = "Det är ett tal mellan 1-" + incr;
     guessBtn.disabled = false;
     textInput.disabled = false;
 }
